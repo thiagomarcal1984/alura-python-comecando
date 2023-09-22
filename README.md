@@ -80,3 +80,30 @@ chute = input("Digite o seu número: ")  # Lê a entrada como string.
 print(numero_secreto == chute)      ## Imprime false: compara inteiro com string.
 print(numero_secreto == int(chute)) ## Imprime true: compara inteiro com inteiro.
 ```
+
+# Diferenças entre o Python 2 e o Python 3
+A chamda da função no Python 2 admite que a função `print` dispense parênteses.
+```python
+print('Funciona nas duas versões do Python, 2 e 3')
+print "Só funciona no Python 2" # Erro de interpretação no Python 3.
+```
+Fornecer uma lista como parâmetro no Python 3 resulta em uma única string;
+```python
+>>> print("ola", "mundo")
+# No Python 2, o resultado é => ("ola", "mundo")
+# No Python 3, o resultado é => "ola mundo"
+```
+
+O comando `print` no Python 2 não tem o parâmetro `sep`
+```python
+>>> print("ola", "mundo", sep=', ', end='\r\n') # Erro de compilação no Python 2.
+```
+
+A função `input` no Python 2 infere o tipo de dados; no Python 3 o tipo é sempre string.
+```python
+>>> var = input('Digite')
+Digite 3
+>>> type(var)
+# No Python 2, imprime <type 'int'>. A função raw_input sempre lê string.
+# No Python 3, imprime <type 'str'>. A função raw_input não existe na versão nova do Python.
+```
