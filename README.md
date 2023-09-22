@@ -71,3 +71,12 @@ Italia ganhou 4 titulos mundiais
 ```
 # Tipagem do Python
 A tipagem do Python é dinâmica: uma variável pode guardar uma string agora e guardar um inteiro depois. O tipo em Python é definido na execução, não na compilação.
+
+# Comparando variáveis
+```python
+numero_secreto = 43                     # Inteiro.
+chute = input("Digite o seu número: ")  # Lê a entrada como string.
+
+print(numero_secreto == chute)      ## Imprime false: compara inteiro com string.
+print(numero_secreto == int(chute)) ## Imprime true: compara inteiro com inteiro.
+```
