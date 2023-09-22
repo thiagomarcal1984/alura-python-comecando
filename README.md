@@ -107,3 +107,34 @@ Digite 3
 # No Python 2, imprime <type 'int'>. A função raw_input sempre lê string.
 # No Python 3, imprime <type 'str'>. A função raw_input não existe na versão nova do Python.
 ```
+
+# A condição elif
+`elif` é o mesmo que `else if` no Python.
+
+Código do arquivo `adivinhacao.py`:
+```python
+print("*******************************")
+print("Bem vindo ao jogo de avinhação!")
+print("*******************************")
+
+numero_secreto = 43
+
+chute_str = input("Digite o seu número: ")
+
+print("Você digitou", chute_str)
+chute = int(chute_str)
+
+acertou = chute == numero_secreto
+maior   = chute > numero_secreto
+menor   = chute < numero_secreto
+
+if (acertou):
+    print("Você acertou.")
+else:
+    if (maior):
+        print("Você errou! O seu chute foi maior que o número secreto.")
+    elif (menor):
+        print("Você errou! O seu chute foi menor que o número secreto.")
+    
+print("Fim do jogo.")
+```
