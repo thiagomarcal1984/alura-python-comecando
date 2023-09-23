@@ -223,3 +223,28 @@ print("Fim do jogo.")
 > print(f'Conteúdo da variavel: {variavel}.')
 > # Imprime: Conteúdo da variavel: 10.
 > ```
+
+# O laço com for
+Sintaxe de um laço com for:
+```python
+for i in [1,2,3]:
+    print(f'Número {i}')
+# Resultado (o número 10 não está incluído no range):
+# Número 1
+# Número 2
+# Número 3
+```
+> Note que no loop com `for` não se usa parenteses, como no `while` ou no `if`.
+
+A função `range` retorna um vetor com números gerados a partir de um início, exclui o número de fim e se gera um número a partir de um valor de passo.
+```python
+inicio  = 1     # É incluído na função range.
+fim     = 10    # É excluído da função range.
+passo   = 3     # Valor que se incrementa a cada passo.
+for num in range(inicio, fim, passo):
+    print(f'Número {num}')
+# Resultado (o número 10 não está incluído no range):
+# Número 1
+# Número 4
+# Número 7
+```
