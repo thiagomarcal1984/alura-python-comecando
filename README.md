@@ -480,3 +480,38 @@ elif (jogo == 2):
     print("Jogando adivinhação.")
 ```
 > O problema: quando importamos o módulo `forca`, ele já executa a partir do arquivo `jogos.py` o código que está em `forca.py`. Queremos importar sem executar o código até que ele seja necessário.
+
+# Criando funções para os nossos jogos
+A solução para evitar o autoload dos arquivos importados é separar o código em funções:
+
+Código do arquivo `jogos.py`:
+```python
+import forca
+import adivinhacao
+
+print("***********************************")
+print("******* Escolha o seu jogo! *******")
+print("***********************************")
+
+print("(1) Forca (2) Adivinhação")
+
+jogo = int(input("Qual jogo? "))
+
+if (jogo == 1):
+    print("Jogando forca.")
+    forca.jogar()
+elif (jogo == 2):
+    print("Jogando adivinhação.")
+    adivinhacao.jogar()
+```
+
+Código do arquivo `forca.py`:
+```python
+def jogar():
+    print("***********************************")
+    print("*** Bem vindo ao jogo da Forca! ***")
+    print("***********************************")
+
+    print("Fim do jogo.")
+```
+> Outro problema: se você tentar executar o arquivo `forca.py` na CLI com o comando `python forca.py`, ele não vai mais funcionar. Ele passa a funcionar somente a partir do arquivo `jogos.py`. Como resolver?
