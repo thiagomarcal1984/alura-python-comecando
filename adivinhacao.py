@@ -1,8 +1,10 @@
+import random
+
 print("*******************************")
 print("Bem vindo ao jogo de avinhação!")
 print("*******************************")
 
-numero_secreto = 43
+numero_secreto = random.randrange(1, 101) # Exclui o número 100.
 total_tentativas = 3
 rodada = 1
 

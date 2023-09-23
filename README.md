@@ -344,3 +344,32 @@ Você pode arredondar números com a funçao built-in `round`:
 >>> round(random.random() * 5)
 3
 ```
+
+# Definindo um intervalo para a geração de números aleatórios
+A função `random.randrange` retorna um inteiro aleatório entre uma faixa de números:
+```python
+random.randrange(10) # Números de zero a dez.
+random.randrange(1, 10) # Números de um a nove (exclui o dez).
+random.randrange(2, 21, 2) # Números pares de 2 a 20 (exclui o 21).
+```
+
+`random` é uma função que, dada a mesma entrada, gerará o mesmo número. O truque é oferecer sempre uma entrada diferente para ter números diferentes e exatamente isso que está acontecendo por baixo dos panos.
+
+Essa entrada também é chamada de seed (semente, em português). Entre as chamadas da função `random`, sempre é utilizado um novo seed. Por padrão o Python usa a hora (os milissegundos) como semente, mas nada nos impede de definir o mesmo seed antecipadamente. Para isso, existe a função `seed`!
+
+Por exemplo, no jogo usamos a função `randrange` para gerar um número aleatório entre 1 e 100. Antes do randrange podemos chamar o seed para definir a entrada:
+
+```python
+>>> random.seed(100)
+>>> random.randrange(1, 101)
+19
+```
+
+Repare que foi gerado 19 e se usarmos o mesmo seed será gerado o mesmo número:
+
+```python
+>>> random.seed(100) # Reinseriu a mesma semente.
+>>> random.randrange(1, 101)
+19 # Retornou o mesmo número 19.
+```
+Repare que a biblioteca random é bem previsível e por isso se chama pseudo-random!
