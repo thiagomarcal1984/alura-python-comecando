@@ -425,3 +425,36 @@ for rodada in range(1, total_tentativas + 1):
     
 print("Fim do jogo.")
 ```
+
+# Definindo uma pontuação para o usuário
+
+```python
+import random
+
+print("*******************************")
+print("Bem vindo ao jogo de avinhação!")
+print("*******************************")
+
+numero_secreto = random.randrange(1, 101) # Exclui o número 100.
+total_tentativas = 0
+pontos = 1000
+
+# ... resto do código.
+
+for rodada in range(1, total_tentativas + 1):
+    # ... resto do código.
+    if (acertou):
+        print(f"Você acertou e fez {pontos} pontos.")
+        break
+    else:
+        if (maior):
+            print("Você errou! O seu chute foi maior que o número secreto.")
+        elif (menor):
+            print("Você errou! O seu chute foi menor que o número secreto.")
+        pontos_perdidos = abs(numero_secreto - chute) # abs é o módulo da diferença.
+        pontos -= pontos_perdidos
+    if (rodada == total_tentativas):
+        print("O número secreto era {}. Você fez {} pontos.".format(numero_secreto, pontos))
+    
+print("Fim do jogo.")
+```
