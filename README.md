@@ -287,3 +287,46 @@ for rodada in range(1, total_tentativas + 1):
     
 print("Fim do jogo.")
 ```
+
+# Para saber mais: Formatação de strings
+```python
+"Num. {} de {}.".format(3, 10)      # Resultado: Num. 3 de 10. A ordem dos parms é seguida.
+"Num. {0} de {1}.".format(3, 10)    # Resultado: Num. 3 de 10. A base de índice dos parms é zero.
+"Num. {1} de {0}.".format(3, 10)    # Resultado: Num. 10 de 3. Invertemos a ordem dentro da string.
+
+"R$ {}".format(1.59)
+    # Resultado: R$ 1.59.
+"R$ {:f}".format(1.59)
+    # Resultado: R$ 1.590000. Por padrão, o formato :f insere seis casas decimais.
+"R$ {:2f}".format(1.5)
+    # Resultado: R$ 1.50. O formato :2f insere duas casas decimais.
+"R$ {:7.2f}".format(1.59)
+    # Resultado: R$    1.59. O formato :7.2f acrescenta espaços e alinha casas decimais.
+    # O total de dígitos será 7.
+"R$ {:07.2f}".format(1.59)
+    # Resultado: R$ 0001.59. O formato :07.2f acrescenta espaços e alinha casas decimais.
+    # O total de dígitos será 7.
+
+"Int. {:7d}".format(80)
+    # Resultado: Int. 0000080. O formato :7d acrescenta espaços e o total de dígitos deve ser sete.
+"Int. {:07d}".format(80)
+    # Resultado: Int. 0000080. O formato :07d acrescenta zeros e o total de dígitos deve ser sete.
+
+"Data {:2}/{:2}".format(9, 4)
+    # Resultado: Data  9/ 4. Repare nos espaços acrescentados ao lado dos dígitos menores que 10.
+"Data {:02}/{:02}".format(9, 4)
+    # Resultado: Data 09/04. Repare nos zeros acrescentados ao lado dos dígitos menores que 10.
+```
+
+> O Python 2 usava uma sintaxe especial, ao invés do `format` era preciso usar o caractere %. Veja o exemplo:
+> ```python
+> "%d %d" % (1, 2)
+> ```
+
+Interpolação de strings com f-strings no Python 3:
+```python
+>>> nome = 'Matheus'
+>>> print(f'Meu nome é {nome.lower()}')
+# Resultado: Meu nome é matheus
+# Repare na função lower, que retornou o valor da variável em minúsculo antes da saída.
+```
