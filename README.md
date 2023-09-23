@@ -515,3 +515,16 @@ def jogar():
     print("Fim do jogo.")
 ```
 > Outro problema: se você tentar executar o arquivo `forca.py` na CLI com o comando `python forca.py`, ele não vai mais funcionar. Ele passa a funcionar somente a partir do arquivo `jogos.py`. Como resolver?
+
+# Diferenciando um arquivo executado de um importado
+Alteração no código do arquivo `forca.py`:
+```python
+def jogar():
+    # Resto do código
+    print("Fim do jogo.")
+
+# Se o arquivo for invocado diretamente pela 
+# CLI, executa a função jogar.
+if __name__ == '__main__': 
+    jogar()
+```
