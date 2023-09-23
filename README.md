@@ -528,3 +528,67 @@ def jogar():
 if __name__ == '__main__': 
     jogar()
 ```
+
+# Python vs C
+A tipagem no Python é dinâmica; a tipagem em C é estática:
+```python
+# Código em Python
+# O tipo da variável é definido em tempo de execução (dinâmico).
+pontos = 1000
+total_de_tentativas = 3
+```
+```C
+// Código em C
+// O tipo da variável é definido em tempo de compilação (estático).
+double pontos = 1000;
+int total_de_tentativas = 3; 
+```
+
+Arquivo do Python não forçam a implementação de uma função; já no C é obrigatório declarar a função `main`:
+
+```python
+# Código em Python
+print("Hello, world!")
+```
+```c
+// Código em C
+#include <stdio.h>
+#include <stdio.lib>
+
+int main() {
+    printf("Hello, world!");
+}
+```
+
+Em Python, a variável só existe depois que você atribui um valor a ela; em C, a variável pode ser declarada, sem ter valor atribuído:
+```python
+# Código em Python
+acertou 
+# Como a variável acertou não existe, vai haver um erro de
+# execução informando que a variável não foi definida.
+```
+```C
+// Código em C
+int main () {
+    bool acertou; 
+    // A variável booleana acertou pode ser declarada, 
+    // mesmo não tendo valor atribuído.
+}
+```
+
+As funções e outros blocos de código em Python são separados pela identação e os comandos são separados por quebra de linha; em C, as funções e blocos são separados por parênteses e os comandos são separados por ponto e vírgula:
+```python
+# Código em Python
+def jogar():
+    if (chute > 6):
+        print("Acertou")
+    else:
+        print("Errou")
+```
+```C
+// Código em C
+#import <stdio.h>
+// A identação está ruim, mas o código funciona.
+int main() { if ( chute > 6) {
+    printf("Acertou");} else {printf("Errou");}}
+```
