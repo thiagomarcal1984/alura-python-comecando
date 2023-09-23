@@ -458,3 +458,25 @@ for rodada in range(1, total_tentativas + 1):
     
 print("Fim do jogo.")
 ```
+
+# Importando arquivos dentro de outros
+Novo arquivo `jogos.py`, para escolher um dos jogos:
+
+```python
+import forca
+import adivinhacao
+
+print("***********************************")
+print("******* Escolha o seu jogo! *******")
+print("***********************************")
+
+print("(1) Forca (2) Adivinhação")
+
+jogo = int(input("Qual jogo?"))
+
+if (jogo == 1):
+    print("Jogando forca.")
+elif (jogo == 2):
+    print("Jogando adivinhação.")
+```
+> O problema: quando importamos o módulo `forca`, ele já executa a partir do arquivo `jogos.py` o código que está em `forca.py`. Queremos importar sem executar o código até que ele seja necessário.
