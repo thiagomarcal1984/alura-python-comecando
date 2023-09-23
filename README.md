@@ -592,3 +592,8 @@ def jogar():
 int main() { if ( chute > 6) {
     printf("Acertou");} else {printf("Errou");}}
 ```
+
+# Interpretado vs Compilado
+O C é uma linguagem compilada (antes do código ser executado, ele precisa ser convertido para a linguagem de máquina); o Python é uma linguagem híbrida (o código é interpretado para bytecodes na pasta `__pycache__` e em seguida executado pelo ambiente de execução do Python).
+
+O conceito de linguagem interpretada/compilada é equivocado: a `implementação` da linguagem é que é interpretada ou compilada. É possível ter Python compilado ou interpretado, porque o código fonte é o mesmo; o que muda é como o código de máquina é gerado.
