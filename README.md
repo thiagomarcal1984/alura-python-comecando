@@ -330,3 +330,17 @@ Interpolação de strings com f-strings no Python 3:
 # Resultado: Meu nome é matheus
 # Repare na função lower, que retornou o valor da variável em minúsculo antes da saída.
 ```
+
+# Gerando e arredondando um número aleatório
+Invocando a função `random`, que gera números aleatórios. Ela não é uma função built-in: é necessário importá-la do módulo `random`:
+```python
+>>> import random
+>>> random.random()
+0.07931856838049844
+```
+
+Você pode arredondar números com a funçao built-in `round`:
+```python
+>>> round(random.random() * 5)
+3
+```
